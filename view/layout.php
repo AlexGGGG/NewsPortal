@@ -21,7 +21,15 @@
                 </li>
                 <li><a href="testError">Info</a></li>
                 <li><a href="./">Stardileht</a></li>
-
+                <li><a href="registerForm">Register </a></li>
+                <div class="pull-right">
+                    <li>
+                        <form action="search">
+                            <input type="text" name="otsi">
+                            <input type="submit" value="otsi">
+                        </form>
+</li>
+</div>
             </ul>			
         </nav>
         <section>
