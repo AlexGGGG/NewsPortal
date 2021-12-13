@@ -8,13 +8,19 @@ $path = explode('/', $host)[$num];
 if ($path == "" OR $path == "index") {
     //Главная страница входа
     $response = controllerAdmin::formLoginSite();
-} elseIf ($path == 'login') {
+} elseif ($path == 'login') {
     //форма входа
     $response = controllerAdmin::loginAction();
-} elseIf ($path == 'logout') {
+} elseif ($path == 'logout') {
     //Выход
+    
     $response = controllerAdmin::logoutAction();
-} else {
+}
+//---------------------------------------listNews
+elseif($path =='newsAdmin'){
+    $response = controllerAdminNews::NewsList();
+}
+else {
     // страница не существует
     $response = controllerAdmin::error404();
 }
