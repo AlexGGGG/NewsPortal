@@ -17,17 +17,17 @@ if ($path == '' OR $path == 'index' OR $path == 'index.php') {
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'], $_GET['id']);
 }
- //---------------register user
- elseif ($path == 'registerForm' )
- {    // form register 
-     $response = Controller::registerForm();
-    }
-elseif  ($path == 'registerAnswer')
-{    // register user
-
-     $response = Controller::registerUser();
-    }
-
+//--------------register user
+elseif ($path == 'registerForm' )
+{   //from register
+    
+    $response = Controller::registerForm();
+}
+elseif ($path == 'registerAnswer' )
+{   //register user
+    $response = Controller::registerUser();
+}
+//error page
 else {
     $response = Controller::error404();
 }
