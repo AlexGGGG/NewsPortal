@@ -29,5 +29,18 @@ public static function newsEditResult($id){
     $test=modelAdminNews::getNewsEdit($id);
     include_once('viewAdmin/newsEditForm.php');
 }
+public static function newsDeleteForm($id){
+
+		$arr=modelAdminCategory::getCategoryList();
+		$detail=modelAdminNews::getNewsDetail($id);
+		include_once ('viewAdmin/newsDeleteForm.php');
+	}
+
+public static function newsDeleteResult($id){
+
+		$test=modelAdminNews::getNewsDelete($id);
+		include_once ('viewAdmin/newsDeleteForm.php');
+	}
+
 }//class
 ?>
